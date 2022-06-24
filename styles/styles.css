@@ -170,7 +170,7 @@
 
 @keyframes title_animation {
     25% {opacity: 1;}
-    50% {opacity: .7;}
+    50% {opacity: .7;} 
     75% {opacity: .5;}
 }
 
