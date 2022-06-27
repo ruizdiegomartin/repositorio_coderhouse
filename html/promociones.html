@@ -13,6 +13,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,700;0,900;1,100;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="../styles/styles.css">
     <title> Let It Be | Promociones </title>
 </head>
@@ -20,18 +22,35 @@
     <!-- ----------------------------------------------------------- HEADER SECTION ---------------------------------------------------------------------------- !-->
 
     <header class="header">
-        <div class="header-container">
-            <a href="../index.html"><img class="logo-img" src="../img/let-it-be-logo.ico" alt="logo-img"></li></a> 
-            <nav>
-                <ul class="nav-list">
-                    <li class="nav-elements"><a href="../index.html" class="nav-links"> Home </a></li>
-                    <li class="nav-elements"><a href="./promociones.html" class="nav-links"> Promociones </a></li>
-                    <li class="nav-elements" ><a href="./productos.html" class="nav-links"> Productos </a></li>
-                    <li class="nav-elements"><a href="./nosotros.html" class="nav-links"> Nosotros </a></li>
-                    <li class="nav-elements"><a href="./contacto.html" class="nav-links"> Contacto </a></li>
-                </ul>
-            </nav>        
-        </div>
+        <header class="header">
+            <!-- Navigator -->
+            <nav class="navbar sticky-top navbar-expand-lg white navigator-bar">
+              <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html"> <img src="../img/let-it-be-logo.jpg" class="logo-img" alt="let-it-be-logo"> </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" href="../index.html">Home</a>
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./promociones.html">Promociones</a>
+                      </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./productos.html">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./nosotros.html">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contacto.html">Contacto</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </header>
     </header>
 
     <!-- ----------------------------------------------------------- MAIN SECTION ---------------------------------------------------------------------------- !-->
@@ -75,6 +94,8 @@
         </div>  
     </footer>
     
-    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
 </body>
 </html>
