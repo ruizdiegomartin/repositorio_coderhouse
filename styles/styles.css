@@ -444,84 +444,66 @@
 
 /* ----------------------------------------------------------- ABOUT US HTML ---------------------------------------------------------------------------- */
 
-.main-about{
-    padding: 50px 50px;
-}
-
-@media screen and (max-width: 768px) {
-    .main-about{
-        padding: 0;
-    }
-}
-
-.about__main-container{
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: solid 3px #000000ce;
-    border-radius: 15px;
-}
-
-@media screen and (max-width: 768px) {
-    .about__main-container{
-        border: none; 
-        border-radius: 0px;      
-    }
-}
-
 .about-title{
-    margin: 75px 0px 25px 0px;
-    font-size: 3rem;
     text-align: center;
-}
-
-
-.about-img__mobile{             /* IMG for mobile view */
-    display: none;
-}
-
-@media screen and (max-width: 768px) {                 /* Show MOBILE IMG in mobile view */
-    .about-img__mobile{
-       display: block;  
-       padding: 50px 0px 0px 0px;
-    }
+    font-size: 3.5rem;
+    font-weight: 700;
 }
 
 .about-img{
-    margin: 50px 0px 0px 0px;
-    border-radius: 10px;
-    width: 70vw;
-}
-
-@media screen and (max-width: 768px) {             /* Hide DESKTOP/TABLET IMG for mobile view  */
-    .about-img{
-        display: none;
-    }
+    border-radius: 50%;
 }
 
 .about-description{
-    padding: 50px;
+    font-size: 1rem;
+    line-height: 2rem;
     width: 80%;
 }
 
-@media screen and (max-width: 768px) {
-    .about-description{
-       width: 100%;     
-    }
+.location-img{
+    width: 100%;
 }
 
-.about-logo{
-    padding: 75px 0px;
-    width: fit-content;
-    width: 30vw;
+.payments-img{
+    width: 100%;
 }
 
-@media screen and (max-width: 768px) {
-    .about-logo{
-       width: 50vw;      
-    }
+.logo-mastercard{
+    width: 100px;
 }
+
+.logo-visa{
+    width: 100px;
+}
+
+.logo-mercadopago{
+    width: 100px;
+}
+
+.columna-1, .columna-2, .columna-3{
+    background-color: #000000a1;
+}
+
+.findus-titles{
+    text-align: center;
+    font-size: 2rem;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.payments-subtitles{
+    padding: 25px 0px;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.findus-text {
+    color: #ffffff;
+    padding: 15px;
+    line-height: 2rem;
+}
+
+
 
 
 /* ----------------------------------------------------------- CONTACT HTML ---------------------------------------------------------------------------- */
