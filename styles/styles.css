@@ -209,7 +209,6 @@
 /* ------------------------------------------------------------- NEW PRODUCT HTML -------------------------------------------------------- */
 
 .main-html{
-    margin-top: 70px;
     background-color: #e08d74c5;
 }
 
@@ -232,7 +231,7 @@
 
 @media screen and (max-width: 768px){
     .main-news{
-        margin-top: 130px;
+        padding-top: 25px;
     }
 }
 
@@ -328,12 +327,6 @@
 
 /* ----------------------------------------------------------- PRODUCTS HTML ---------------------------------------------------------------------------- */
 
-@media screen and (max-width: 768px){                   /* main re-size (nav) for mobile*/                    
-    .main-products{
-        margin-top: 130px;
-    }
-}
-
 .title-container{
     background-color: #000000d3;
     color: #ffffff;
@@ -371,7 +364,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 50px;
-    padding: 50px;
+    padding: 75px 50px 100px 50px;
 }
 
 
@@ -457,7 +450,6 @@
 
 @media screen and (max-width: 768px) {
     .main-about{
-        margin-top: 130px;
         padding: 0;
     }
 }
@@ -540,12 +532,6 @@
     align-items: center;
 }
 
-@media screen and (max-width: 768px){
-    .form-card {
-        margin-top: 58px;
-    }
-}
-
 .main-section__contact{
     background-color: #ffffff;
     width: 60%;
@@ -570,7 +556,6 @@
         width: 100%;
         border-left: none;
         border-right: none;
-        margin-top: 60px;
     }
 }
 
