@@ -20,6 +20,16 @@
     margin-left: .7rem;
 }
 
+.nav-link{
+    text-align: center;
+}
+
+@media screen and (max-width: 991px){
+    .nav-link:hover{
+        background-color: #e2a69485;
+    }
+}
+
 /* MAIN STYLES */
 
 .main {
