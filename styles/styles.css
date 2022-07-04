@@ -133,6 +133,10 @@
     box-shadow: 0px 0px;
 }
 
+.shop-btn:visited {
+    color: ffffff
+}
+
 /* ------------------------- FOOTER STYLE ------------------------------ */
 
 .footer{
@@ -207,7 +211,7 @@
 }
 
 .bx:hover{
-    background-color: #d8d6d6;
+    background-color: #f8b8a5fa;
 }
 
 .footer-copyright{
