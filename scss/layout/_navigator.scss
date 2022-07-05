@@ -1,0 +1,21 @@
+.navigator-bar{
+    border-bottom: solid 3px $color-black;
+}
+
+.logo-img {
+    height: 48px;
+    margin-left: 12px;
+}
+
+.nav-link{
+    text-align: center;
+    
+    @media screen and (max-width: 991px){
+        &:hover{
+            background-color: #e2a69485;
+        }
+    }
+}
+
+
+
