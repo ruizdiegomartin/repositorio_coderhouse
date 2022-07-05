@@ -46,54 +46,7 @@
      
 /* -- Cards General Style -- */
 
-.product-card{
-    background-color: #ffffffc7;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    border-radius: 5px;
-    &:hover{
-        box-shadow: 2px 2px 25px rgba(97, 96, 96, 0.829);
-    }
 
-    & .product-name{
-        width: max-content;
-        padding: 25px;
-    }
-    & .product-img{
-        width: 70%;
-        border-radius: 5px;
-    }
-    
-    & .product-description{
-        width: 70%;
-        padding: 25px 0px 25px 8px;
-    }
-
-    & .buy-btn{
-        margin: 15px 0 25px 0;
-        border: none;
-        background-color: #3a3a3a;
-        color: #ffffff;
-        width: 150px;
-        height: 50px;
-        border-radius: 8px;
-        box-shadow: 4px 4px #5c5b5b;
-        transition: transform .2s, box-shadow .2ms;
-
-        &:hover {
-            font-weight: 700;
-            background-color: #161616;
-            cursor: pointer;
-        }
-        &:active {
-            transform: translate(4px, 4px);
-            box-shadow: 0px 0px;
-        }
-    }
-    
-}
 
 
 
