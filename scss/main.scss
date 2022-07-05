@@ -1,0 +1,16 @@
+@import "var/variables";
+
+@import "base/reset";
+@import "base/typography";
+
+@import "layout/navigator";
+@import "layout/footer";
+
+@import "pages/index";
+@import "pages/promociones";
+@import "pages/productos";
+@import "pages/nosotros";
+@import "pages/contacto";
+
+@import "components/buttons";
+@import "components/cards";

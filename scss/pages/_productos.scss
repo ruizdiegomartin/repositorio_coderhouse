@@ -1,0 +1,61 @@
+.title-container{
+    background-color: $color-black;
+    color: $color-white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+
+    & .products_main-title{
+        width: fit-content; 
+        font-size: 15rem;
+
+        @media screen and (max-width: 768px){
+            font-size: 10rem;
+        }
+
+        @media screen and (max-width: 540px){
+            font-size: 7rem;
+        }
+
+        @media screen and (max-width: 380px){
+            font-size: 5rem;
+        }
+    }
+}
+
+.products-section{                                           /* products grid for desktop view */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 50px;
+    padding: 75px 50px 100px 50px;
+
+    @media screen and (max-width: 971px){                         /* grid for tablet view */
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(auto, 1fr);
+    }
+    @media screen and (max-width: 768px){                         /* grid for mobile view  */
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(auto, .5fr);
+    }
+    @media screen and (max-width: 369px){                         /* grid for mobile view  */
+            padding: 15px;
+    }
+}
+     
+/* -- Cards General Style -- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+

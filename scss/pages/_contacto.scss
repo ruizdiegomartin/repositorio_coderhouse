@@ -1,0 +1,228 @@
+
+.form-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & .main-section__contact{
+        background-color: $color-white;
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;   
+        border-right: solid 3px $color-black;
+        border-left: solid 3px $color-black;
+
+        @media screen and (max-width: 1024px){
+            width: 70%;
+            align-items: start;
+            height: 100%;
+        }
+        @media screen and (max-width: 768px){
+            width: 100%;
+            border-left: none;
+            border-right: none;
+        }
+
+        & .form-title {
+            padding: 50px;
+            font-size: 2.5rem;
+
+            @media screen and (max-width: 1024px){
+                margin: auto;
+            }
+            @media screen and (max-width: 768px){
+                font-size: 1.8rem;
+                padding: 60px 0px 40px 15px;
+            }
+        }
+
+        & .contact-form{
+            width: 90%;
+            margin-right: 5%;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: .5fr .5fr .5fr .5fr 1fr .5fr .5fr;
+            grid-template-areas: 
+            "name"
+            "mail"
+            "consult-type"
+            "subscribe"
+            "comments"
+            "reset"
+            "send";
+            padding: 0 40px 40px 40px;
+            font-weight: 700;
+            line-height: 1.5rem;
+        
+            @media screen and (max-width: 768px){
+                padding: 20px;
+            }
+
+            & .form-name{
+                grid-area: name;
+                & .form-input{
+                    width: 60%;
+                    padding: 12px 5px;
+                    border: none;
+                    border-bottom: solid 2px $color-black;
+                    outline: none;
+                }
+            }
+            
+            & .form-mail{
+                grid-area: mail;
+                & .form-input{
+                    width: 60%;
+                    padding: 12px 5px;
+                    border: none;
+                    border-bottom: solid 2px $color-black;
+                    outline: none;
+                }
+            }
+
+            & .form-consult{
+                grid-area: consult-type;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            & .form-consult select{
+                width: fit-content;
+            }
+
+            & .form-checkbox{
+                grid-area: subscribe;
+                width: 50%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                @media screen and (max-width: 1400px){
+                    width: 75%;
+                }
+                @media screen and (max-width: 1024px){
+                    width: 50vw;
+                }
+                @media screen and (max-width: 768px){
+                    width: 90vw;
+                }
+                @media screen and (max-width: 420px){
+                    margin-bottom: 20px;
+                }
+            }
+
+            & .form-comments{
+                grid-area: comments;
+            }
+
+            & .form__text-area{
+                margin: 10px 0 10px 0;
+                padding: 8px;
+                width: 85%;
+                resize: none;
+            }
+            
+            & .form__reset-button {
+                grid-area: reset;
+                min-width: fit-content;
+                background-color: #747272;
+                color: #ffffff;
+                width: 220px;
+                height: 40px;
+                border-radius: 8px;
+                border: none;
+                font-size: 1rem;
+
+                &:hover {
+                    background-color: #928f8f;
+                    cursor: pointer; 
+                }
+
+                &:active{
+                    transform: translate(0px, 4px);
+                }
+
+                @media screen and (max-width: 1024px){
+                    height: 40px;
+                    width: 200px;
+                    padding: .2rem 1rem; 
+                }
+            }
+
+            & .form__send-button {
+                grid-area: send;
+                background-color: #3a3a3a;
+                color: #ffffff;
+                width: 120px;
+                height: 40px;
+                border-radius: 8px;
+                border: none;
+                font-size: 1rem;
+
+                &:hover {
+                    background-color: $color-black;
+                    color: $color-white;
+                    cursor: pointer;
+                }
+
+                &:active {
+                    transform: translate(0px, 4px);
+                }
+
+                @media screen and (max-width: 1024px){
+                    height: 40px;
+                    width: 120px;
+                    padding: 3px 8px; 
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
