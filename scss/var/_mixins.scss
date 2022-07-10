@@ -1,0 +1,24 @@
+
+/* Media queries mixins */
+
+@mixin tablet-view {
+    @media screen and (max-width: 1024px){
+        @content;
+    }
+}
+
+@mixin mobile-landscape-view {
+    @media screen and (max-width: 768px){
+        @content;
+    }
+}
+
+@mixin mobile-portrait-view {
+    @media screen and (max-width: 478px){
+        @content;
+    }
+}
+
+
+
+

@@ -1,51 +1,44 @@
 .title-container{
-    background-color: $color-black;
-    color: $color-white;
+    background-color: map-get($colors, Transparency-bg);
+    color: map-get($colors, Text);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 50vh;
 
-    & .products_main-title{
+    &__title {
         width: fit-content; 
         font-size: 15rem;
 
-        @media screen and (max-width: 768px){
+        @include mobile-landscape-view{
             font-size: 10rem;
         }
 
-        @media screen and (max-width: 540px){
-            font-size: 7rem;
-        }
-
-        @media screen and (max-width: 380px){
+        @include mobile-portrait-view{
             font-size: 5rem;
         }
     }
 }
 
-.products-section{                                           /* products grid for desktop view */
+.products-section{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 50px;
     padding: 75px 50px 100px 50px;
 
-    @media screen and (max-width: 971px){                         /* grid for tablet view */
+    @include tablet-view {   
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(auto, 1fr);
     }
-    @media screen and (max-width: 768px){                         /* grid for mobile view  */
+    @include mobile-landscape-view {                  
         grid-template-columns: 1fr;
         grid-template-rows: repeat(auto, .5fr);
     }
-    @media screen and (max-width: 369px){                         /* grid for mobile view  */
-            padding: 15px;
+    @include mobile-portrait-view{
+        padding: 50px 20px;
     }
 }
-     
-/* -- Cards General Style -- */
-
 
 
 

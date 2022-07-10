@@ -11,18 +11,17 @@
     &:hover{
         box-shadow: 2px 2px 25px rgba(97, 96, 96, 0.829);
     }
-
-    & .product-name{
+    &__title{
         width: max-content;
         padding: 25px;
     }
-    & .product-img{
+    &__img{
         width: 70%;
         border-radius: 5px;
     }
-    
-    & .product-description{
+    &__description{
         width: 70%;
         padding: 25px 0px 25px 8px;
     }
 }
+
