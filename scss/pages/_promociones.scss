@@ -9,7 +9,7 @@
     height: 100vh;
     justify-content: space-around;
 
-    @media screen and (max-width: 768px){
+    @include mobile-landscape-view {
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
@@ -23,7 +23,7 @@
         justify-content: space-evenly;
         align-items: center;
 
-        @media screen and (max-width: 768px){
+        @include mobile-landscape-view {
             width:100%;   
         }
 
@@ -32,7 +32,7 @@
             text-align: center;
             margin: 0 5px;
 
-            @media screen and (max-width: 768px){
+            @include mobile-landscape-view {
                 width:100vw;
                 padding: 30px;
             }
@@ -41,7 +41,7 @@
         & .new-product__video{
             width: 40vw;
 
-            @media screen and (max-width: 768px){
+            @include mobile-landscape-view {
                 width: 90vw;
                 padding: 15px;
             }
@@ -50,7 +50,7 @@
         & .new-product__description{
             width: 50vw;
 
-            @media screen and (max-width: 768px){
+            @include mobile-landscape-view {
                 width:90vw;
                 padding: 30px;
             }
@@ -69,7 +69,7 @@
         align-items: center;
         overflow-y: scroll; 
     
-        @media screen and (max-width: 768px){
+        @include mobile-landscape-view {
             width: 100vw;
             border: none;
             padding: 50px 0px;
@@ -81,13 +81,13 @@
             border: solid 2px $color-black;
             margin: 25px;
     
-            @media screen and (max-width: 1024px){
+            @include tablet-view{
                 width: 22vw;
             }
     
-            @media screen and (max-width: 768px){
-                    width: 40vw;
-                    margin: 25px 0;
+            @include mobile-landscape-view{
+                width: 40vw;
+                margin: 25px 0;
             }
         }
     }

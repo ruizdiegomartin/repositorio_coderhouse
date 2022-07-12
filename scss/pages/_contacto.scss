@@ -1,10 +1,11 @@
 
-.form-card{
+
+.main-container__contact{
     display: flex;
     justify-content: center;
     align-items: center;
 
-    & .main-section__contact{
+    & .contact-section{
         background-color: $color-white;
         width: 60%;
         display: flex;
@@ -14,31 +15,31 @@
         border-right: solid 3px $color-black;
         border-left: solid 3px $color-black;
 
-        @media screen and (max-width: 1024px){
+        @include tablet-view{
             width: 70%;
             align-items: start;
             height: 100%;
         }
-        @media screen and (max-width: 768px){
+        @include mobile-portrait-view{
             width: 100%;
             border-left: none;
             border-right: none;
         }
 
-        & .form-title {
+        &__form-title {
             padding: 50px;
             font-size: 2.5rem;
 
-            @media screen and (max-width: 1024px){
+            @include tablet-view {
                 margin: auto;
             }
-            @media screen and (max-width: 768px){
+            @include mobile-landscape-view {
                 font-size: 1.8rem;
                 padding: 60px 0px 40px 15px;
             }
         }
 
-        & .contact-form{
+        &__form {
             width: 90%;
             margin-right: 5%;
             display: grid;
@@ -56,7 +57,7 @@
             font-weight: 700;
             line-height: 1.5rem;
         
-            @media screen and (max-width: 768px){
+            @include mobile-landscape-view{
                 padding: 20px;
             }
 
@@ -91,6 +92,7 @@
 
             & .form-consult select{
                 width: fit-content;
+                padding: 5px;
             }
 
             & .form-checkbox{
@@ -103,13 +105,15 @@
                 @media screen and (max-width: 1400px){
                     width: 75%;
                 }
-                @media screen and (max-width: 1024px){
+                @include tablet-view {
                     width: 50vw;
                 }
-                @media screen and (max-width: 768px){
+                @include mobile-landscape-view {
                     width: 90vw;
+                    flex-direction: column;
+                    align-items: flex-start;
                 }
-                @media screen and (max-width: 420px){
+                @include mobile-portrait-view{
                     margin-bottom: 20px;
                 }
             }
@@ -123,6 +127,13 @@
                 padding: 8px;
                 width: 85%;
                 resize: none;
+
+                @include mobile-landscape-view{
+                    width: 60%;
+                }
+                @include mobile-portrait-view{
+                    width: 85%;
+                }
             }
             
             & .form__reset-button {
@@ -145,10 +156,10 @@
                     transform: translate(0px, 4px);
                 }
 
-                @media screen and (max-width: 1024px){
+                @include tablet-view {
                     height: 40px;
                     width: 200px;
-                    padding: .2rem 1rem; 
+                    padding: 3px 12px; 
                 }
             }
 
@@ -172,7 +183,7 @@
                     transform: translate(0px, 4px);
                 }
 
-                @media screen and (max-width: 1024px){
+                @include tablet-view {
                     height: 40px;
                     width: 120px;
                     padding: 3px 8px; 
