@@ -1,29 +1,33 @@
 
 
 .main-container__contact{
+    padding: 100px 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    @include mobile-portrait-view{
+        padding: 0;
+    }
 
     & .contact-section{
         background-color: $color-white;
-        width: 60%;
+        width: 80%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;   
-        border-right: solid 3px $color-black;
-        border-left: solid 3px $color-black;
+        border: solid 3px $color-black;
+        border-radius: 25px;
 
         @include tablet-view{
-            width: 70%;
+            width: 80%;
             align-items: start;
             height: 100%;
         }
         @include mobile-portrait-view{
             width: 100%;
-            border-left: none;
-            border-right: none;
+            border: none;  
+            border-radius: 0px;
         }
 
         &__form-title {
@@ -189,6 +193,37 @@
                     padding: 3px 8px; 
                 }
             }
+        }
+    }
+}
+
+.faq-banner {
+    @extend .flex-center;
+    background-color: #000000c4;
+
+    &__title{
+        font-size: 5rem;
+        color: $color-white;
+    }
+}
+
+.faq-container {
+    width:80%;
+    margin: 0 auto;
+    padding: 50px 0;
+    &__faq-q{
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+    &__faq-a{
+        width:90%;
+        line-height: 2rem;
+    }
+    &__faq-ul{
+        list-style-type: square;
+        & li{
+            width: 80%;
+            line-height: 2rem;
         }
     }
 }

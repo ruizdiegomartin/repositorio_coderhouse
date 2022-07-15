@@ -44,7 +44,7 @@
                         <a class="nav-link" href="./nosotros.html">Nosotros</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./contacto.html">Contacto</a>
+                        <a class="nav-link" href="./contacto.html">FAQs & Contacto</a>
                     </li>
                   </ul>
                 </div>
@@ -56,29 +56,73 @@
     <!-- ----------------------------------------------------------- MAIN SECTION ---------------------------------------------------------------------------- !-->
 
     <main class="main-html main-news">
-        <div class="new-container">
-            <section class="section__new-product">
-                <h1 class="new-product__title"> LO ÚLTIMO: VELA BURBUJA </h1>
-                <video class="new-product__video" src="../video/unicorn-candle.mp4" controls></video>
-                <p class="new-product__description"> Descripción del último producto agregado. Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo ea tempore dolorem officia corporis nihil odio 
-                    rem reiciendis, maiores ex repellendus error, molestias asperiores mollitia, sed accusantium? Hic suscipit doloribus accusamus mollitia iusto, molestiae officiis 
-                    ducimus quaerat repellat adipisci nesciunt ipsa velit reprehenderit cupiditate error, numquam sit. Ducimus velit ad modi perspiciatis odit natus doloribus officia,
-                    aperiam nam impedit sunt quis distinctio facilis non quos. Voluptatum, id aliquid delectus reiciendis quod esse. 
-                    </p>
-            </section>
-
-            <section class="section__new-product-imgs">
-                <img class="new-product_img" src="../img/bubble-candle1.jpg" alt="bubble-candle1">
-                <img class="new-product_img" src="../img/bubble-candle2.jpg" alt="bubble-candle2">
-                <img class="new-product_img" src="../img/bubble-candle3.jpg" alt="bubble-candle3">
-            </section>
-
+        <div class="container-newstitle">
+          <h1 class="container-newstitle__newstitle"> NOVEDADES </h1>
         </div>
+        <div class="newproduct-container">
+            <div class="newproduct-container__carousel">
+
+              <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="../img/slide1.jpg" class="d-block w-100" alt="bubble-candle">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="../img/slide2.jpg" class="d-block w-100" alt="bubble-candle">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="../img/slide3.jpg" class="d-block w-100" alt="bubble-candle">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+              
+            </div>
+                
+            <div class="newproduct-container__content">
+              <h3 class="newproduct-container__content__title"> VELA BURBUJA </h3>
+              <p class="newproduct-container__content__description"> Te presentamos la última novedad de LET IT BE: una vela hecha a base de soja con un moderno diseño de burbujas. Decorá tu hogar con la combinación de colores que prefieras y perfumá el ambiente con las distintas variedades de aromas.   
+              </p>
+            </div>           
+        </div>
+
+        <div class="container-newstitle">
+          <h2 class="container-newstitle__newstitle"> PROMOCIONES </h2>
+        </div>
+
+        <div class="section-offers">
+          <div class="card-offer">
+            <img src="../img/candle+carpet.png" class="card-offer__img" alt="vela-y-carpeta">
+            <h3 class="card-offer__title"> Vela & Carpeta </h3>
+            <p class="card-offer__description"> Una vela de soja aroma a elección y una carpeta tejida.</p>
+            <button class="card-offer__btn"> Añadir al carrito </button>
+          </div>
+          <div class="card-offer">
+            <img src="../img/vela-silver.png" class="card-offer__img" alt="vela-silver">
+            <h3 class="card-offer__title"> Vela silver</h3>
+            <p class="card-offer__description"> Compra tres velas edición silver y pagá dos (3x2).</p>
+            <button class="card-offer__btn"> Añadir al carrito </button>
+          </div>
+          <div class="card-offer">
+            <img src="../img/splash+box.png" class="card-offer__img" alt="splashs-y-cajon">
+            <h3 class="card-offer__title"> Splash & Cajón </h3>
+            <p class="card-offer__description"> Dos splash aroma a elección y un cajón artesanal decorativo.</p>
+            <button class="card-offer__btn"> Añadir al carrito </button>
+          </div>
+        </div>
+
+        
+        
         
 
     </main>
-
-    <!-- ----------------------------------------------------------- FOOTER SECTION ---------------------------------------------------------------------------- !-->
 
     <footer class="footer">
         <div class="footer-container">
