@@ -2,27 +2,35 @@
 /* Cards - Products */
 
 .product-card{
-    width: 90%;
     background-color: #ffffffc7;
+    padding: 1rem;
+    max-width: 350px;
+    max-height: 550px;
+    border-radius: 5px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    justify-content: space-evenly;
-    border-radius: 5px;
+    transition: all 200ms;
     &:hover{
-        box-shadow: 2px 2px 25px rgba(97, 96, 96, 0.829);
+        box-shadow: 2px 2px 25px #616060d3;
+        scale: 1.1;
     }
     &__title{
-        width: max-content;
-        padding: 25px;
+        font-size: 1.5rem;
+        font-weight: 700;
+        text-align: center;
+        padding: 10px;
     }
     &__img{
-        width: 70%;
-        border-radius: 5px;
+        height: 300px;
+        width: 300px;
+        object-fit: cover;
     }
     &__description{
-        width: 70%;
-        padding: 25px 0px 25px 8px;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        text-align: center;
     }
 }
 

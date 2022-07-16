@@ -3,3 +3,10 @@ $color-white: #ffffff;
 $color-black: #000000;
 $color-grey: #2c2c2c;
 $color-opacity: #000000c4;
+
+/* Display flex centrado */
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -33,29 +33,17 @@
 /* Cards - Buy Button*/
 
 .buy-btn{
-    margin: 15px 0 25px 0;
+    padding: .5rem 1rem;
+    border-radius: 10px;
     border: none;
+    color: $color-white;
     background-color: #3a3a3a;
-    color: #ffffff;
-    width: 150px;
-    height: 50px;
-    border-radius: 8px;
-    box-shadow: 4px 4px #5c5b5b;
-    transition: transform .2s, box-shadow .2ms;
-
-    &:hover {
-        font-weight: 700;
+    transition: all 200ms;
+    &:hover{
         background-color: #161616;
-        cursor: pointer;
     }
     &:active {
-        transform: translate(4px, 4px);
-        box-shadow: 0px 0px;
+        transform: translate(4px,4px);
     }
 }
 
-.buy-btn-test{
-    @extend .buy-btn;
-    background-color: rgb(255, 0, 43);
-    font-size: 1.5rem;
-}
