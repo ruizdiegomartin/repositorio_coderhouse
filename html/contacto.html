@@ -19,87 +19,72 @@
     <title> Let It Be | Contacto </title>
 </head>
 <body>
-    <!-- ----------------------------------------------------------- HEADER SECTION ---------------------------------------------------------------------------- !-->
-
-    <header class="header">
-      <!-- Navigator -->
-      <nav class="navbar sticky-top navbar-expand-lg white navigator-bar">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="../index.html"> <img src="../img/let-it-be-logo.jpg" class="logo-img" alt="let-it-be-logo"> </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="../index.html">Home</a>
-              <li class="nav-item">
-                <a class="nav-link" href="./promociones.html">Promociones</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./productos.html">Productos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./nosotros.html">Nosotros</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="./contacto.html">FAQs & Contacto</a>
-              </li>
-            </ul>
-          </div>
+  <!-- HEADER -->
+  <header>
+    <!-- Navigator -->
+    <nav class="navbar sticky-top navbar-expand-lg white navigator-bar">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html"> <img src="../img/let-it-be-logo.jpg" class="logo-img" alt="let-it-be-logo"> </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Home</a>
+            <li class="nav-item">
+              <a class="nav-link" href="./novedades.html">Novedades</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./productos.html">Productos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./nosotros.html">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./contacto.html">FAQs & Contacto</a>
+            </li>
+          </ul>
         </div>
-      </nav>
-    </header>
-
-    <!-- ----------------------------------------------------------- MAIN SECTION ---------------------------------------------------------------------------- !-->
-
-    <main class="main-html">
-        
-        <div class="main-container__contact">
-            <section class="contact-section">  
-                
-                <h1 class="contact-section__form-title"> CONTÁCTANOS... </h1>
-                
-                <form action="" class="contact-section__form">
-                    <div class="form-name">
-                        <label for="userName" class="form-label">Nombre y apellido</label><br>
-                        <input type="text" id="userName" placeholder="Ingrese su nombre..." name="name" required class="form-input"><br><br>
-                    </div>
-    
-                    <div class="form-mail">
-                        <label for="userMail" class="form-label">Correo electrónico</label><br>
-                        <input type="email" id="userMail" placeholder="Ingrese su email..." name="mail" required class="form-input"><br><br>
-                    </div>
-    
-                    <div class="form-consult">
-                        <label for="consult-type" class="form-label">Tipo de consulta</label><br>
-                        <select name="consult-type" id="consult-type">
-                            <option value="1">Consultar precio</option>
-                            <option value="2">Consultar stock</option>
-                            <option value="3">Consultar variedad</option>
-                        </select><br><br>
-                    </div>
-                        
-                    <div class="form-checkbox">
-                        <label for="">Quiero recibir las últimas novedades<br>en mi casilla de correo electrónico</label>
-                        <input type="checkbox" name="subscription" required><br><br>
-                    </div>
-    
-                    <div class="form-comments">
-                        <label class="form-label" for="commentaryBox">Comentarios:</label><br>
-                        <textarea class="form__text-area" name="commentaries" maxlength="300" id="commentaryBox" cols="40" rows="5" placeholder="Ingrese su comentario aquí..."></textarea><br><br>
-                    </div>
-    
-                    <input class="form__reset-button" type="reset" value="Reiniciar el formulario"><br><br>  
-    
-                    <input class="form__send-button" type="submit" value="Enviar"><br><br>
-    
-                          
-                </form>
-                
-            </section>
-        </div>
-
+      </div>
+    </nav>
+  </header>
+    <!-- MAIN -->
+    <main>
+      <div class="container-contact">
+        <section class="container-contact__section">      
+          <h1 class="container-contact__section__title"> CONTÁCTANOS... </h1>   
+          <form action="" class="container-contact__section__form">
+            <div class="container-contact__section__form__form-name">
+              <label for="userName" class="form-label">Nombre y apellido</label><br>
+              <input type="text" id="userName" placeholder="Ingrese su nombre..." name="name" required class="form-input"><br><br>
+            </div>
+            <div class="container-contact__section__form__form-mail">
+              <label for="userMail" class="form-label">Correo electrónico</label><br>
+              <input type="email" id="userMail" placeholder="Ingrese su email..." name="mail" required class="form-input"><br><br>
+            </div>
+            <div class="container-contact__section__form__form-consult">
+              <label for="consult-type" class="form-label">Tipo de consulta</label><br>
+              <select name="consult-type" id="consult-type">
+                <option value="1">PRECIO</option>
+                <option value="2">STOCK</option>
+                <option value="3">VARIEDADES</option>
+              </select><br><br>
+            </div>         
+            <div class="container-contact__section__form__form-checkbox">
+              <label for="">Quiero recibir las últimas novedades<br>en mi casilla de correo electrónico</label>
+              <input type="checkbox" name="subscription" required><br><br>
+            </div>
+            <div class="container-contact__section__form__form-comments">
+              <label class="form-label" for="commentaryBox">Comentarios:</label><br>
+              <textarea class="form__text-area" name="commentaries" maxlength="300" id="commentaryBox" cols="40" rows="5" placeholder="Ingrese su comentario aquí..."></textarea><br><br>
+            </div>
+            <input class="container-contact__section__form__reset-button" type="reset" value="Reiniciar el formulario"><br><br>  
+            <input class="container-contact__section__form__send-button" type="submit" value="Enviar"><br><br>     
+          </form>   
+        </section>
+      </div>
+      <section class="faqs">
         <div class="faq-banner">
           <h2 class="faq-banner__title"> FAQs </h2>
         </div>
@@ -118,28 +103,28 @@
             <li> Para evitar dañar el envase, suspendé el uso de la vela cuando quede menos de un centímetro de cera en la misma.</li>
           </ul>        
         </div>
+      </section>
 
     </main>
+  <!-- FOOTER -->
+  <footer>
+    <div class="container-footer">
+      <div class="container-footer__social">
+        <p class="container-footer__social__text">Síguenos en redes...</p>
+        <div class="container-footer__social__icons">
+          <a href="https://www.instagram.com/let_itbeshop/" target="_blank"><i class='bx bxl-instagram-alt'></i></a>
+          <a href=""><i class='bx bx-envelope' ></i></a>   
+          <a href="https://www.facebook.com/letitbeshop" target="_blank"><i class='bx bxl-facebook-square'></i></a>
+        </div>    
+      </div>
+      <p class="container-footer__copyright">© 2022 Let It Be</p>
+    </div>  
+  </footer>
 
-    <!-- ----------------------------------------------------------- FOOTER SECTION ---------------------------------------------------------------------------- !-->
-
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-media">
-                <p class="footer-text">Síguenos en redes...</p>
-                <div class="social-icons">
-                    <a href="https://www.instagram.com/let_itbeshop/" target="_blank"><i class='bx bxl-instagram-alt'></i></a>
-                    <a href=""><i class='bx bx-envelope' ></i></a>   
-                    <a href="https://www.facebook.com/letitbeshop" target="_blank"><i class='bx bxl-facebook-square'></i></a>
-                </div>    
-            </div>
-            <p class="footer-copyright">© 2022 Let It Be</p>
-        </div>  
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-        crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous">
+  </script>
         
 </body>
 </html>

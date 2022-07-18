@@ -1,19 +1,19 @@
 
 /* Media queries mixins */
 
-@mixin tablet-view {
+@mixin tablet-resolution {
     @media screen and (max-width: 1024px){
         @content;
     }
 }
 
-@mixin mobile-landscape-view {
+@mixin mobile-landscape-resolution {
     @media screen and (max-width: 768px){
         @content;
     }
 }
 
-@mixin mobile-portrait-view {
+@mixin mobile-portrait-resolution {
     @media screen and (max-width: 478px){
         @content;
     }

@@ -39,9 +39,11 @@
     color: $color-white;
     background-color: #3a3a3a;
     transition: all 200ms;
+
     &:hover{
         background-color: #161616;
     }
+    
     &:active {
         transform: translate(4px,4px);
     }

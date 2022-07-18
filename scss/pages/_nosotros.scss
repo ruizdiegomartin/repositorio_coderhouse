@@ -12,14 +12,14 @@
 
 .container-about {
     display: flex;
-    @include tablet-view {
+    @include tablet-resolution {
         flex-direction: column;
         }
     &__container-img {
         @extend .flex-center;
         width: 40%;
         margin: 25px 0;
-        @include tablet-view {
+        @include tablet-resolution {
             width:100%;
             }
         & img {
@@ -30,7 +30,7 @@
         @extend .flex-center;
         width: 60%;
         margin-bottom: 25px;
-        @include tablet-view {
+        @include tablet-resolution {
             width:100%;
         }
         & p {
@@ -44,7 +44,7 @@
 .find-us {
     display: flex;
     background-color: $color-main;
-    @include tablet-view {
+    @include tablet-resolution {
         flex-direction: column;
         }
     & section {
@@ -52,7 +52,7 @@
         color: $color-white;
         width: calc(100% / 3);
         padding: 2%;
-        @include tablet-view {
+        @include tablet-resolution {
             width:100%;
         }
         display: flex;
@@ -82,11 +82,11 @@
         width: 100%;
         border-radius: 10px;
         margin: 25px 0;
-        @include tablet-view {
+        @include tablet-resolution {
             width: 90%;
             margin-bottom: 50px;
         }
-        @include mobile-portrait-view {
+        @include mobile-portrait-resolution {
             width: 100%;
         }
     }

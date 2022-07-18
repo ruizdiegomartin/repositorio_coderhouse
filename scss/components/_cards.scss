@@ -32,38 +32,6 @@
         line-height: 1.5rem;
         text-align: center;
     }
-}
-
-.card-offer{
-    background-color: #ffffffc7;
-    padding: 1rem;
-    max-width: 350px;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: all 200ms;
-    &:hover{
-        box-shadow: 2px 2px 25px #616060d3;
-        scale: 1.1;
-    }
-    &__img{
-        height: 300px;
-        width: 300px;
-        object-fit: cover;
-    }
-    &__title{
-        font-size: 1.5rem;
-        font-weight: 700;
-        text-align: center;
-        padding: 10px;
-    }
-    &__description {
-        font-size: 1rem;
-        line-height: 1.5rem;
-        text-align: center;
-    }
     &__btn{
         padding: .5rem 1rem;
         border-radius: 10px;
@@ -79,3 +47,16 @@
         }
     }
 }
+
+.offer {
+    position: relative;
+    & h4 {
+        position: absolute;
+        width: 100%;
+        background-color: $color-opacity;
+        color: $color-white;
+        text-align: center;
+        padding: 1rem;
+    }
+}
+    

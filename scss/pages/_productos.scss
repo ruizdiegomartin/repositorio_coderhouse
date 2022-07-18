@@ -10,11 +10,11 @@
         width: fit-content; 
         font-size: 15rem;
 
-        @include mobile-landscape-view{
+        @include mobile-landscape-resolution{
             font-size: 10rem;
         }
 
-        @include mobile-portrait-view{
+        @include mobile-portrait-resolution{
             font-size: 5rem;
         }
     }
@@ -30,18 +30,7 @@
     justify-content: space-around;
 }    
 
-//     @include tablet-view {   
-//         grid-template-columns: repeat(2, 1fr);
-//         grid-template-rows: repeat(auto, 1fr);
-//     }
-//     @include mobile-landscape-view {                  
-//         grid-template-columns: 1fr;
-//         grid-template-rows: repeat(auto, .5fr);
-//     }
-//     @include mobile-portrait-view{
-//         padding: 50px 20px;
-//     }
-// }
+
 
 
 

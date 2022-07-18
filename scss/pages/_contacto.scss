@@ -1,15 +1,13 @@
 
 
-.main-container__contact{
+.container-contact{
+    @extend .flex-center;
     padding: 100px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    @include mobile-portrait-view{
+    @include mobile-portrait-resolution{
         padding: 0;
     }
 
-    & .contact-section{
+    &__section{
         background-color: $color-white;
         width: 80%;
         display: flex;
@@ -19,27 +17,32 @@
         border: solid 3px $color-black;
         border-radius: 25px;
 
-        @include tablet-view{
+        @include tablet-resolution{
             width: 80%;
             align-items: start;
             height: 100%;
         }
-        @include mobile-portrait-view{
+        @include mobile-portrait-resolution{
             width: 100%;
             border: none;  
             border-radius: 0px;
         }
 
-        &__form-title {
+        &__title {
             padding: 50px;
             font-size: 2.5rem;
 
-            @include tablet-view {
-                margin: auto;
+            @include tablet-resolution {
+                width: 100%;
+                text-align: center;
+                
             }
-            @include mobile-landscape-view {
+            @include mobile-landscape-resolution {
                 font-size: 1.8rem;
-                padding: 60px 0px 40px 15px;
+            }
+            @include mobile-portrait-resolution {
+                background-color: $color-black;
+                color: $color-white;
             }
         }
 
@@ -61,14 +64,14 @@
             font-weight: 700;
             line-height: 1.5rem;
         
-            @include mobile-landscape-view{
+            @include mobile-landscape-resolution{
                 padding: 20px;
             }
 
-            & .form-name{
+            &__form-name{
                 grid-area: name;
                 & .form-input{
-                    width: 60%;
+                    width: 80%;
                     padding: 12px 5px;
                     border: none;
                     border-bottom: solid 2px $color-black;
@@ -76,10 +79,10 @@
                 }
             }
             
-            & .form-mail{
+            &__form-mail{
                 grid-area: mail;
                 & .form-input{
-                    width: 60%;
+                    width: 80%;
                     padding: 12px 5px;
                     border: none;
                     border-bottom: solid 2px $color-black;
@@ -87,19 +90,19 @@
                 }
             }
 
-            & .form-consult{
+            &__form-consult{
                 grid-area: consult-type;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
             }
 
-            & .form-consult select{
+            &__form-consult select{
                 width: fit-content;
                 padding: 5px;
             }
 
-            & .form-checkbox{
+            &__form-checkbox{
                 grid-area: subscribe;
                 width: 50%;
                 display: flex;
@@ -109,38 +112,37 @@
                 @media screen and (max-width: 1400px){
                     width: 75%;
                 }
-                @include tablet-view {
+                @include tablet-resolution {
                     width: 50vw;
                 }
-                @include mobile-landscape-view {
+                @include mobile-landscape-resolution {
                     width: 90vw;
                     flex-direction: column;
                     align-items: flex-start;
                 }
-                @include mobile-portrait-view{
+                @include mobile-portrait-resolution{
                     margin-bottom: 20px;
                 }
             }
 
-            & .form-comments{
+            &__form-comments{
                 grid-area: comments;
-            }
-
-            & .form__text-area{
-                margin: 10px 0 10px 0;
-                padding: 8px;
-                width: 85%;
-                resize: none;
-
-                @include mobile-landscape-view{
-                    width: 60%;
-                }
-                @include mobile-portrait-view{
+                & textarea {
+                    margin: 10px 0 10px 0;
+                    padding: 8px;
                     width: 85%;
+                    resize: none;
+    
+                    @include mobile-landscape-resolution{
+                        width: 60%;
+                    }
+                    @include mobile-portrait-resolution{
+                        width: 85%;
+                    }
                 }
             }
             
-            & .form__reset-button {
+            &__reset-button {
                 grid-area: reset;
                 min-width: fit-content;
                 background-color: #747272;
@@ -160,14 +162,14 @@
                     transform: translate(0px, 4px);
                 }
 
-                @include tablet-view {
+                @include tablet-resolution {
                     height: 40px;
                     width: 200px;
                     padding: 3px 12px; 
                 }
             }
 
-            & .form__send-button {
+            &__send-button {
                 grid-area: send;
                 background-color: #3a3a3a;
                 color: #ffffff;
@@ -187,7 +189,7 @@
                     transform: translate(0px, 4px);
                 }
 
-                @include tablet-view {
+                @include tablet-resolution {
                     height: 40px;
                     width: 120px;
                     padding: 3px 8px; 
