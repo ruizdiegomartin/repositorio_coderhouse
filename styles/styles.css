@@ -1,5 +1,5 @@
 /* Display flex centrado */
-.flex-center, .faq-banner, .container-contact, .container-about__container-description, .container-about__container-img, .container-title, .container-newstitle, .home-container__content-section, .home-container__picture-section {
+.flex-center, .faq-banner, .container-contact__section__form__form-checkbox input, .container-contact, .container-about__container-description, .container-about__container-img, .container-title, .container-newstitle, .home-container__content-section, .home-container__picture-section {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -466,7 +466,7 @@ main {
 .section-findus__title {
   font-weight: 700;
 }
-@media screen and (max-width: 478px) {
+@media screen and (max-width: 1024px) {
   .section-findus__title {
     margin-top: 25px;
   }
@@ -487,7 +487,19 @@ main {
   border-radius: 10px;
   margin: 1.5rem 0;
 }
-.section-payments__logos {
+.section-payments__logos-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-around;
+}
+@media screen and (max-width: 1024px) {
+  .section-payments__logos-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.section-payments__logos-container img {
   width: 100px;
 }
 
@@ -570,10 +582,8 @@ main {
 .container-contact__section__form {
   width: 90%;
   margin-right: 5%;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr 1fr 0.5fr 0.5fr;
-  grid-template-areas: "name" "mail" "consult-type" "subscribe" "comments" "reset" "send";
+  display: flex;
+  flex-direction: column;
   padding: 0 40px 40px 40px;
   font-weight: 700;
   line-height: 1.5rem;
@@ -584,66 +594,95 @@ main {
   }
 }
 .container-contact__section__form__form-name {
-  grid-area: name;
+  display: flex;
+  flex-direction: column;
 }
-.container-contact__section__form__form-name .form-input {
+.container-contact__section__form__form-name input {
   width: 80%;
   padding: 12px 5px;
   border: none;
   border-bottom: solid 2px #000000;
   outline: none;
+  margin-bottom: 2rem;
 }
 .container-contact__section__form__form-mail {
-  grid-area: mail;
+  display: flex;
+  flex-direction: column;
 }
-.container-contact__section__form__form-mail .form-input {
+.container-contact__section__form__form-mail input {
   width: 80%;
   padding: 12px 5px;
   border: none;
   border-bottom: solid 2px #000000;
   outline: none;
+  margin-bottom: 2rem;
 }
 .container-contact__section__form__form-consult {
-  grid-area: consult-type;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 25px 0;
 }
 .container-contact__section__form__form-consult select {
   width: fit-content;
   padding: 5px;
 }
 .container-contact__section__form__form-checkbox {
-  grid-area: subscribe;
-  width: 50%;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-}
-@media screen and (max-width: 1400px) {
-  .container-contact__section__form__form-checkbox {
-    width: 75%;
-  }
-}
-@media screen and (max-width: 1024px) {
-  .container-contact__section__form__form-checkbox {
-    width: 50vw;
-  }
+  padding: 25px 0;
 }
 @media screen and (max-width: 768px) {
   .container-contact__section__form__form-checkbox {
-    width: 90vw;
     flex-direction: column;
     align-items: flex-start;
   }
 }
-@media screen and (max-width: 478px) {
-  .container-contact__section__form__form-checkbox {
-    margin-bottom: 20px;
+.container-contact__section__form__form-checkbox label {
+  margin: 0 25px;
+}
+@media screen and (max-width: 768px) {
+  .container-contact__section__form__form-checkbox label {
+    order: 1;
+    margin: 0;
   }
 }
+.container-contact__section__form__form-checkbox input {
+  appearance: none;
+  height: 50px;
+  min-width: 50px;
+  background-color: #d5d5d5;
+  border-radius: 5px;
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .container-contact__section__form__form-checkbox input {
+    order: 2;
+    margin: 25px 0 0 0;
+  }
+}
+.container-contact__section__form__form-checkbox input:hover {
+  background-color: #aca9a9;
+  scale: 1.1;
+}
+.container-contact__section__form__form-checkbox input:checked {
+  background-color: #e2a694;
+}
+.container-contact__section__form__form-checkbox input::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f00c";
+  font-weight: 900;
+  font-size: 40px;
+  color: #ffffff;
+  display: none;
+}
+.container-contact__section__form__form-checkbox input:checked::after {
+  display: block;
+}
 .container-contact__section__form__form-comments {
-  grid-area: comments;
+  display: flex;
+  flex-direction: column;
 }
 .container-contact__section__form__form-comments textarea {
   margin: 10px 0 10px 0;
@@ -662,7 +701,6 @@ main {
   }
 }
 .container-contact__section__form__reset-button {
-  grid-area: reset;
   min-width: fit-content;
   background-color: #747272;
   color: #ffffff;
@@ -671,6 +709,7 @@ main {
   border-radius: 8px;
   border: none;
   font-size: 1rem;
+  margin: 45px 0 0 0;
 }
 .container-contact__section__form__reset-button:hover {
   background-color: #928f8f;
@@ -687,7 +726,6 @@ main {
   }
 }
 .container-contact__section__form__send-button {
-  grid-area: send;
   background-color: #3a3a3a;
   color: #ffffff;
   width: 120px;
@@ -695,6 +733,7 @@ main {
   border-radius: 8px;
   border: none;
   font-size: 1rem;
+  margin: 50px 0;
 }
 .container-contact__section__form__send-button:hover {
   background-color: #000000;
@@ -728,16 +767,16 @@ main {
 .faq-container__faq-q {
   font-size: 1.2rem;
   font-weight: 700;
+  line-height: 2rem;
 }
 .faq-container__faq-a {
-  width: 90%;
   line-height: 2rem;
 }
 .faq-container__faq-ul {
   list-style-type: square;
 }
 .faq-container__faq-ul li {
-  width: 80%;
+  text-justify: auto;
   line-height: 2rem;
 }
 
@@ -800,6 +839,12 @@ main {
 .product-card:hover {
   box-shadow: 2px 2px 25px rgba(97, 96, 96, 0.8274509804);
   scale: 1.1;
+}
+@media screen and (max-width: 478px) {
+  .product-card:hover {
+    scale: 1;
+    box-shadow: 0;
+  }
 }
 .product-card__title {
   font-size: 1.5rem;

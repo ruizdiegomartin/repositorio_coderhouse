@@ -49,17 +49,8 @@
         &__form {
             width: 90%;
             margin-right: 5%;
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: .5fr .5fr .5fr .5fr 1fr .5fr .5fr;
-            grid-template-areas: 
-            "name"
-            "mail"
-            "consult-type"
-            "subscribe"
-            "comments"
-            "reset"
-            "send";
+            display: flex;
+            flex-direction: column;
             padding: 0 40px 40px 40px;
             font-weight: 700;
             line-height: 1.5rem;
@@ -69,70 +60,94 @@
             }
 
             &__form-name{
-                grid-area: name;
-                & .form-input{
-                    width: 80%;
-                    padding: 12px 5px;
-                    border: none;
-                    border-bottom: solid 2px $color-black;
-                    outline: none;
+                display: flex;
+                flex-direction: column;
+                & input {
+                    @include form-input;
                 }
             }
             
             &__form-mail{
-                grid-area: mail;
-                & .form-input{
-                    width: 80%;
-                    padding: 12px 5px;
-                    border: none;
-                    border-bottom: solid 2px $color-black;
-                    outline: none;
+                display: flex;
+                flex-direction: column;
+                & input {
+                    @include form-input;
                 }
             }
 
             &__form-consult{
-                grid-area: consult-type;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
+                padding: 25px 0;
+                & select {
+                    width: fit-content;
+                    padding: 5px;
+                }
             }
 
-            &__form-consult select{
-                width: fit-content;
-                padding: 5px;
-            }
+            
 
             &__form-checkbox{
-                grid-area: subscribe;
-                width: 50%;
+                width: 100%;
                 display: flex;
-                justify-content: space-between;
                 align-items: center;
-
-                @media screen and (max-width: 1400px){
-                    width: 75%;
-                }
-                @include tablet-resolution {
-                    width: 50vw;
-                }
+                padding: 25px 0;
+                
                 @include mobile-landscape-resolution {
-                    width: 90vw;
                     flex-direction: column;
                     align-items: flex-start;
                 }
-                @include mobile-portrait-resolution{
-                    margin-bottom: 20px;
+
+                & label{
+                    margin: 0 25px;
+                    @include mobile-landscape-resolution{
+                    order: 1;
+                    margin: 0;
+                    }  
+                }
+                & input{
+                    appearance: none;
+                    height: 50px;
+                    min-width: 50px;
+                    background-color: #d5d5d5;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    @extend .flex-center;
+                    @include mobile-landscape-resolution{
+                        order: 2;
+                        margin: 25px 0 0 0;
+                        }
+                    &:hover{
+                        background-color: #aca9a9;
+                        scale: 1.1;
+                    }
+                    &:checked{
+                        background-color: $color-main;
+                    }
+                    &::after{
+                        font-family: "Font Awesome 5 Free";
+                        content: "\f00c";
+                        font-weight: 900;
+                        font-size: 40px;
+                        color: $color-white;
+                        display: none;
+                    }
+                    &:checked::after{
+                       display: block; 
+                    }
                 }
             }
+            
 
             &__form-comments{
-                grid-area: comments;
+                display: flex;
+                flex-direction: column;
                 & textarea {
                     margin: 10px 0 10px 0;
                     padding: 8px;
                     width: 85%;
                     resize: none;
-    
                     @include mobile-landscape-resolution{
                         width: 60%;
                     }
@@ -143,7 +158,6 @@
             }
             
             &__reset-button {
-                grid-area: reset;
                 min-width: fit-content;
                 background-color: #747272;
                 color: #ffffff;
@@ -152,6 +166,7 @@
                 border-radius: 8px;
                 border: none;
                 font-size: 1rem;
+                margin: 45px 0 0 0;
 
                 &:hover {
                     background-color: #928f8f;
@@ -170,7 +185,6 @@
             }
 
             &__send-button {
-                grid-area: send;
                 background-color: #3a3a3a;
                 color: #ffffff;
                 width: 120px;
@@ -178,6 +192,7 @@
                 border-radius: 8px;
                 border: none;
                 font-size: 1rem;
+                margin: 50px 0;
 
                 &:hover {
                     background-color: $color-black;
@@ -216,15 +231,15 @@
     &__faq-q{
         font-size: 1.2rem;
         font-weight: 700;
+        line-height: 2rem;
     }
     &__faq-a{
-        width:90%;
         line-height: 2rem;
     }
     &__faq-ul{
         list-style-type: square;
         & li{
-            width: 80%;
+            text-justify: auto;
             line-height: 2rem;
         }
     }
