@@ -3,65 +3,40 @@
     background-color: $color-black;
     color: $color-white;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    @include tablet-resolution {   
-            min-height: 90px;
-        }
-
     @include mobile-landscape-resolution {    
         flex-direction: column;
         height: 200px;
+        padding: 10px;
         justify-content: space-evenly;
-    } 
-    &__copyright{
-        margin: 0 35px;
-    } 
-    &__social{
-        width: 35%;
+    }
+    &__text{
+        margin: 0;
+    }
+    &__icons{
+        width: 200px;
         height: 80px;
         display: flex;
-        justify-content: space-evenly;
         align-items: center;
-        margin: 0 40px;
-        @include mobile-landscape-resolution {    
-            flex-direction: column;
-            height: 110px;
-            width: 100%;
-            justify-content: space-between;
-        }
-        &__text{
-            margin-bottom: 0;
-            @include mobile-landscape-resolution {
-                margin-bottom: 16px;
+        justify-content: space-around;
+        & i {
+            font-size: 2.5rem;
+            color: $color-black;
+            background-color: $color-white;
+            border-radius: 50%;
+            padding: 2.5px;
+            transition: transform .5s;
+            &:hover{
+                background-color: #f8b8a5fa;
+                transform: translate(0,-5px);
+            }
+            &:active{
+                scale: 1.1;
             }
         }
-        &__icons{
-            width: 200px;
-            height: 80px;
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
-            & i {
-                font-size: 2.5rem;
-                color: $color-black;
-                background-color: $color-white;
-                border-radius: 50%;
-                padding: 2.5px;
-                &:hover{
-                    background-color: #f8b8a5fa;
-                    scale: 1.2;
-                }
-            }
-        }
+    } 
+    &__copyright{
+        margin: 0;
     }
-}
-    
-
-    
-
-        
-
-            
-   
-
+} 

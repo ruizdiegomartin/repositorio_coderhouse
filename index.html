@@ -11,7 +11,7 @@
     content="aromáticos, decoración, perfumería, velas, splash, difusores, jabón, souvenirs, decorativo, aromas, fragancias, productos, mayorista, minorista" />
   <meta name="author" content="Diego Martin Ruiz" />
   <meta name="copyright" content="Let It Be Shop" />
-  <link rel="icon" type="image/png" href="./img/let-it-be-logo.ico" />
+  <link rel="icon" type="image/x-icon" href="./img/let-it-be-logo.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -20,6 +20,7 @@
   <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="styles/styles.css">
   <title> Let It Be | Home </title>
 </head>
@@ -36,7 +37,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="./html/novedades.html">Novedades</a>
@@ -59,7 +60,7 @@
   <main class="main-index">
     <!-- Left side -->
     <div class="home-container">
-      <div class="home-container__picture-section">
+      <div class="home-container__picture-section" data-aos="zoom-out" data-aos-duration="1000">
         <img src="./img/candle-slide1.jpg" class="home-container__picture-section__img" alt="candle-img">    
       </div>
       <!-- Right side -->
@@ -70,7 +71,7 @@
           <p class="home-container__content-section__content__main-text">Contamos con velas de soja y decorativas <br> Splash, difusores, jabones y mantas
             <br> Venta mayorista y minorista <br> Souvenirs para eventos y celebraciones
           </p>
-          <a href="./html/productos.html" class="shop-btn"> ¡Ver productos! </a>
+          <a href="./html/productos.html" class="shop-btn" data-aos="flip-up" data-aos-delay="500" data-aos-duration="2000"> ¡Ver productos! </a>
         </div> 
       </div> 
     </div>                          
@@ -78,15 +79,13 @@
   <!-- FOOTER -->
   <footer>
     <div class="container-footer">
-        <div class="container-footer__social">
-            <p class="container-footer__social__text">Síguenos en redes...</p>
-            <div class="container-footer__social__icons">
-                <a href="https://www.instagram.com/let_itbeshop/" target="_blank"><i
-                        class='bx bxl-instagram-alt'></i></a>
-                <a href=""><i class='bx bx-envelope'></i></a>
-                <a href="https://www.facebook.com/letitbeshop" target="_blank"><i
-                        class='bx bxl-facebook-square'></i></a>
-            </div>
+        <p class="container-footer__text">Síguenos en redes...</p>
+        <div class="container-footer__icons">
+          <a href="https://www.instagram.com/let_itbeshop/" target="_blank"><i
+            class='bx bxl-instagram-alt'></i></a>
+          <a href=""><i class='bx bx-envelope'></i></a>
+          <a href="https://www.facebook.com/letitbeshop" target="_blank"><i
+            class='bx bxl-facebook-square'></i></a>
         </div>
         <p class="container-footer__copyright">© 2022 Let It Be</p>
     </div>
@@ -95,6 +94,10 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
     crossorigin="anonymous">
+  </script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
   </script>
 
 </body>

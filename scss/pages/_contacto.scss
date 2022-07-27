@@ -83,10 +83,9 @@
                 & select {
                     width: fit-content;
                     padding: 5px;
+                    cursor: pointer;
                 }
             }
-
-            
 
             &__form-checkbox{
                 width: 100%;
@@ -146,13 +145,13 @@
                 & textarea {
                     margin: 10px 0 10px 0;
                     padding: 8px;
-                    width: 85%;
+                    width: 80%;
                     resize: none;
                     @include mobile-landscape-resolution{
-                        width: 60%;
+                        width: 90%;
                     }
                     @include mobile-portrait-resolution{
-                        width: 85%;
+                        width: 100%;
                     }
                 }
             }

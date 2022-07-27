@@ -7,17 +7,16 @@
     margin: 50px auto;
     font-size: 1.2rem;
     text-decoration: none;
-    border: 5px solid #971154;
     text-align: center;
     color: $color-white;
-    background-color: #741745;
+    background-color: #d81b7a;
     padding: 15px 25px;
     border-radius: 8px;
     box-shadow: 3px 3px #30081c;;
     transition: transform .2s, box-shadow .2s;
 
     &:hover {
-        background-color: #e42585;
+        background-color: #971154;
     }
 
     &:active {

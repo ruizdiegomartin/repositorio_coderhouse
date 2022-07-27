@@ -9,7 +9,6 @@
 
 .nav-link{
     text-align: center;
-    
     @media screen and (max-width: 991px){
         &:hover{
             background-color: #e2a69485;
@@ -18,16 +17,18 @@
 }
 
 .navbar-toggler-icon{
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.7%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    background-image: url("../../img/bars-solid.svg");
 }
 
 .navbar-toggler{
     border: 0;
-    
+    transition: all .5s;
     &:focus{
         outline: 0;
         background-color: $color-main;
         box-shadow: 0 0 0 0;
+        .navbar-toggler-icon{
+            background-image: url("../../img/xmark-solid.svg");}
     }
     &:active{
         scale: 1.1;
