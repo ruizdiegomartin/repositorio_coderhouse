@@ -1,5 +1,6 @@
-
-
+html{
+    min-width: 300px;
+}
 .container-contact{
     @extend .flex-center;
     padding: 100px 0;
@@ -54,16 +55,19 @@
             padding: 0 40px 40px 40px;
             font-weight: 700;
             line-height: 1.5rem;
-        
             @include mobile-landscape-resolution{
                 padding: 20px;
+                margin: 0;
+                width: 100%;
             }
-
             &__form-name{
                 display: flex;
                 flex-direction: column;
                 & input {
                     @include form-input;
+                    @include mobile-portrait-resolution{
+                        width:100%;
+                    }
                 }
             }
             
@@ -72,6 +76,9 @@
                 flex-direction: column;
                 & input {
                     @include form-input;
+                    @include mobile-portrait-resolution{
+                        width:100%;
+                    }
                 }
             }
 
@@ -117,6 +124,7 @@
                         order: 2;
                         margin: 25px 0 0 0;
                         }
+                        
                     &:hover{
                         background-color: #aca9a9;
                         scale: 1.1;
@@ -134,6 +142,27 @@
                     }
                     &:checked::after{
                        display: block; 
+                    }
+                    animation-name: check-beating;
+                    animation-delay: 1s;
+                    animation-duration: 2s;
+                    @keyframes check-beating {
+                        25% {
+                            scale: 1.2;
+                            background-color: $color-main;
+                        }
+                        50% { 
+                            scale: 1;
+                            background-color: #d5d5d5;
+                        } 
+                        75% {
+                            scale: 1.2;
+                            background-color: $color-main;
+                        }
+                        100% {
+                            scale: 1;
+                            background-color: #d5d5d5;
+                        }
                     }
                 }
             }
@@ -158,17 +187,16 @@
             
             &__reset-button {
                 min-width: fit-content;
-                background-color: #747272;
-                color: #ffffff;
+                color: $color-black;
                 width: 220px;
                 height: 40px;
                 border-radius: 8px;
-                border: none;
+                border: 2px solid #747272;
                 font-size: 1rem;
-                margin: 45px 0 0 0;
+                margin: 50px 0;
 
                 &:hover {
-                    background-color: #928f8f;
+                    background-color: #cec9c9;
                     cursor: pointer; 
                 }
 
@@ -181,6 +209,10 @@
                     width: 200px;
                     padding: 3px 12px; 
                 }
+                @include mobile-portrait-resolution{
+                    width: 100%;
+                    padding: 6px 12px; 
+                }
             }
 
             &__send-button {
@@ -191,7 +223,7 @@
                 border-radius: 8px;
                 border: none;
                 font-size: 1rem;
-                margin: 50px 0;
+                margin: 45px 0 0 0;
 
                 &:hover {
                     background-color: $color-black;
@@ -207,6 +239,10 @@
                     height: 40px;
                     width: 120px;
                     padding: 3px 8px; 
+                }
+                @include mobile-portrait-resolution{
+                    width: 100%;
+                    padding: 6px 12px; 
                 }
             }
         }

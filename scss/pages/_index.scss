@@ -1,9 +1,6 @@
 
-.main-index {
-    background-color: $color-main;
-}
 
-.home-container {
+.main-index {
     display: flex;
     flex-direction: row;
     background-color: $color-main;
@@ -65,11 +62,15 @@
                 margin-bottom: 35px;
                 text-align: center;
             }
-            &__main-text {
+            &__main-description {
+                padding: 0;
+                list-style-type: none;
+                & li {
                 font-size: 1rem;
                 line-height: 2rem;
                 text-align: center;
                 margin: 0 25px 0 25px;
+                }
             }
         }
     }

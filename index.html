@@ -28,51 +28,54 @@
 <body>
   <header class="header">
     <!-- Navigator -->
-      <nav class="navbar sticky-top navbar-expand-lg bg-white navigator-bar">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="./index.html"> <img src="./img/let-it-be-logo.jpg" class="logo-img" alt="let-it-be-logo"> </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./html/novedades.html">Novedades</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./html/productos.html">Productos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./html/nosotros.html">Nosotros</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./html/contacto.html">FAQs & Contacto</a>
-              </li>
-            </ul>
-          </div>
+    <nav class="navbar navbar-expand-lg bg-white navigator-bar">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./index.html"> <img src="./img/let-it-be-logo.jpg" class="logo-img" alt="let-it-be-logo"> </a>
+        <button class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="toggler-icon top-bar"></span>
+          <span class="toggler-icon middle-bar"></span>
+          <span class="toggler-icon bottom-bar"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./html/novedades.html">Novedades</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./html/productos.html">Productos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./html/nosotros.html">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./html/contacto.html">FAQs & Contacto</a>
+            </li>
+          </ul>
         </div>
-      </nav>
+      </div>
+    </nav>
   </header>
   <!-- MAIN -->
   <main class="main-index">
     <!-- Left side -->
-    <div class="home-container">
-      <div class="home-container__picture-section" data-aos="zoom-out" data-aos-duration="1000">
-        <img src="./img/candle-slide1.jpg" class="home-container__picture-section__img" alt="candle-img">    
-      </div>
-      <!-- Right side -->
-      <div class="home-container__content-section">
-        <div class="home-container__content-section__content">
-          <h1 class="home-container__content-section__content__main-title">LET IT BE</h1>
-          <h2 class="home-container__content-section__content__main-subtitle"> Productos aromáticos y decorativos</h2>
-          <p class="home-container__content-section__content__main-text">Contamos con velas de soja y decorativas <br> Splash, difusores, jabones y mantas
-            <br> Venta mayorista y minorista <br> Souvenirs para eventos y celebraciones
-          </p>
-          <a href="./html/productos.html" class="shop-btn" data-aos="flip-up" data-aos-delay="500" data-aos-duration="2000"> ¡Ver productos! </a>
-        </div> 
+    <div class="main-index__picture-section" data-aos="zoom-out" data-aos-duration="1000">
+      <img src="./img/candle-slide1.jpg" class="main-index__picture-section__img" alt="candle-img">    
+    </div>
+    <!-- Right side -->
+    <div class="main-index__content-section">
+      <div class="main-index__content-section__content">
+        <h1 class="main-index__content-section__content__main-title">LET IT BE</h1>
+        <h2 class="main-index__content-section__content__main-subtitle"> Productos aromáticos y decorativos</h2>
+        <ul class="main-index__content-section__content__main-description">
+          <li>Contamos con velas de soja y difusores</li>
+          <li>Splash aromáticos, jabones y mantas</li>
+          <li>Venta mayorista y minorista</li>
+          <li>Souvenirs para eventos y celebraciones</li>
+        </ul>
+        <a href="./html/productos.html" class="shop-btn" data-aos="flip-up" data-aos-delay="500" data-aos-duration="2000"> ¡Ver productos! </a>
       </div> 
     </div>                          
   </main>
@@ -80,13 +83,13 @@
   <footer>
     <div class="container-footer">
         <p class="container-footer__text">Síguenos en redes...</p>
-        <div class="container-footer__icons">
-          <a href="https://www.instagram.com/let_itbeshop/" target="_blank"><i
-            class='bx bxl-instagram-alt'></i></a>
-          <a href=""><i class='bx bx-envelope'></i></a>
-          <a href="https://www.facebook.com/letitbeshop" target="_blank"><i
-            class='bx bxl-facebook-square'></i></a>
-        </div>
+        <ul class="container-footer__icons">
+          <li><a href="https://www.instagram.com/let_itbeshop/" target="_blank"><i
+            class='bx bxl-instagram-alt'></i></a></li>
+          <li><a href="./html/error404.html" target="_blank"><i class='bx bx-envelope'></i></a></li>
+          <li><a href="https://www.facebook.com/letitbeshop" target="_blank"><i
+            class='bx bxl-facebook-square'></i></a></li>
+        </ul>
         <p class="container-footer__copyright">© 2022 Let It Be</p>
     </div>
   </footer> 

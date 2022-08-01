@@ -24,11 +24,13 @@
   <!-- HEADER -->
   <header>
     <!-- Navigator -->
-    <nav class="navbar sticky-top navbar-expand-lg white navigator-bar">
+    <nav class="navbar navbar-expand-lg white navigator-bar">
       <div class="container-fluid">
         <a class="navbar-brand" href="../index.html"> <img src="../img/let-it-be-logo.jpg" class="logo-img" alt="let-it-be-logo"> </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="toggler-icon top-bar"></span>
+          <span class="toggler-icon middle-bar"></span>
+          <span class="toggler-icon bottom-bar"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto">
@@ -75,7 +77,7 @@
               </select>
             </div>         
             <div class="container-contact__section__form__form-checkbox">
-              <input type="checkbox" name="subscription" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="500">
+              <input type="checkbox" name="subscription">
               <label for="">Suscribirme al Newsletter y recibir las últimas novedades en mi correo electrónico.</label>
               
             </div>
@@ -83,8 +85,8 @@
               <label class="form-label" for="commentaryBox">Comentarios:</label>
               <textarea class="form__text-area" name="commentaries" maxlength="300" id="commentaryBox" cols="40" rows="5" placeholder="Ingrese su comentario aquí..."></textarea>
             </div>
-            <input class="container-contact__section__form__reset-button" type="reset" value="Reiniciar el formulario">
-            <input class="container-contact__section__form__send-button" type="submit" value="Enviar">   
+            <input class="container-contact__section__form__send-button" type="submit" value="Enviar">
+            <input class="container-contact__section__form__reset-button" type="reset" value="Reiniciar el formulario">   
           </form>   
         </section>
       </div>
@@ -114,13 +116,11 @@
   <footer>
     <div class="container-footer">
         <p class="container-footer__text">Síguenos en redes...</p>
-        <div class="container-footer__icons">
-          <a href="https://www.instagram.com/let_itbeshop/" target="_blank"><i
-            class='bx bxl-instagram-alt'></i></a>
-          <a href=""><i class='bx bx-envelope'></i></a>
-          <a href="https://www.facebook.com/letitbeshop" target="_blank"><i
-            class='bx bxl-facebook-square'></i></a>
-        </div>
+        <ul class="container-footer__icons">
+          <li><a href="https://www.instagram.com/let_itbeshop/" target="_blank"><i class='bx bxl-instagram-alt'></i></a></li>
+          <li><a href="./error404.html" target="_blank"><i class='bx bx-envelope'></i></a></li>
+          <li><a href="https://www.facebook.com/letitbeshop" target="_blank"><i class='bx bxl-facebook-square'></i></a></li>
+        </ul>
         <p class="container-footer__copyright">© 2022 Let It Be</p>
     </div>
   </footer>

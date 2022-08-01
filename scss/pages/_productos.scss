@@ -1,6 +1,6 @@
 .title-container{
-    background-color: map-get($colors, Transparency-bg);
-    color: map-get($colors, Text);
+    background-color: $color-opacity;
+    color: $color-white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,7 +20,7 @@
     }
 }
 
-.products-section{
+.products-container{
     display: flex;
     flex-wrap: wrap;
     gap: 50px;

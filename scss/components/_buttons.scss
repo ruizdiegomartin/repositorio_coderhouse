@@ -12,8 +12,34 @@
     background-color: #d81b7a;
     padding: 15px 25px;
     border-radius: 8px;
-    box-shadow: 3px 3px #30081c;;
+    box-shadow: 3px 3px #30081c;
     transition: transform .2s, box-shadow .2s;
+    
+    animation-name: beating;
+    animation-delay: 2s;
+    animation-duration: 2s;
+    @include mobile-portrait-resolution{
+        animation-delay: 1s;
+    }
+
+    @keyframes beating {
+        25% {
+            scale: 1.2;
+            background-color: #971154;
+         }
+        50% { 
+            scale: 1;
+            background-color: #d81b7a;
+        } 
+        75% {
+            scale: 1.2;
+            background-color: #971154;
+        }
+        100% {
+            scale: 1;
+            background-color: #d81b7a;
+        }
+    }
 
     &:hover {
         background-color: #971154;
@@ -35,12 +61,13 @@
     padding: .5rem 1rem;
     border-radius: 10px;
     border: none;
+    text-decoration: none;
     color: $color-white;
     background-color: #3a3a3a;
     transition: all 200ms;
-
     &:hover{
         background-color: #161616;
+        color: $color-white;
     }
     
     &:active {
