@@ -1,14 +1,11 @@
-html{
-    min-width: 300px;
-}
-.container-contact{
+.contact{
     @extend .flex-center;
     padding: 100px 0;
     @include mobile-portrait-resolution{
         padding: 0;
     }
 
-    &__section{
+    &__wrapper-contact{
         background-color: $color-white;
         width: 80%;
         display: flex;
@@ -28,238 +25,219 @@ html{
             border: none;  
             border-radius: 0px;
         }
-
-        &__title {
-            padding: 50px;
-            font-size: 2.5rem;
-
-            @include tablet-resolution {
-                width: 100%;
-                text-align: center;
-                
-            }
-            @include mobile-landscape-resolution {
-                font-size: 1.8rem;
-            }
-            @include mobile-portrait-resolution {
-                background-color: $color-black;
-                color: $color-white;
-            }
-        }
-
-        &__form {
-            width: 90%;
-            margin-right: 5%;
-            display: flex;
-            flex-direction: column;
-            padding: 0 40px 40px 40px;
-            font-weight: 700;
-            line-height: 1.5rem;
-            @include mobile-landscape-resolution{
-                padding: 20px;
-                margin: 0;
-                width: 100%;
-            }
-            &__form-name{
-                display: flex;
-                flex-direction: column;
-                & input {
-                    @include form-input;
-                    @include mobile-portrait-resolution{
-                        width:100%;
-                    }
-                }
-            }
-            
-            &__form-mail{
-                display: flex;
-                flex-direction: column;
-                & input {
-                    @include form-input;
-                    @include mobile-portrait-resolution{
-                        width:100%;
-                    }
-                }
-            }
-
-            &__form-consult{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                padding: 25px 0;
-                & select {
-                    width: fit-content;
-                    padding: 5px;
-                    cursor: pointer;
-                }
-            }
-
-            &__form-checkbox{
-                width: 100%;
-                display: flex;
-                align-items: center;
-                padding: 25px 0;
-                
-                @include mobile-landscape-resolution {
-                    flex-direction: column;
-                    align-items: flex-start;
-                }
-
-                & label{
-                    margin: 0 25px;
-                    @include mobile-landscape-resolution{
-                    order: 1;
-                    margin: 0;
-                    }  
-                }
-                & input{
-                    appearance: none;
-                    height: 50px;
-                    min-width: 50px;
-                    background-color: #d5d5d5;
-                    border-radius: 5px;
-                    cursor: pointer;
-                    @extend .flex-center;
-                    @include mobile-landscape-resolution{
-                        order: 2;
-                        margin: 25px 0 0 0;
-                        }
-                        
-                    &:hover{
-                        background-color: #aca9a9;
-                        scale: 1.1;
-                    }
-                    &:checked{
-                        background-color: $color-main;
-                    }
-                    &::after{
-                        font-family: "Font Awesome 5 Free";
-                        content: "\f00c";
-                        font-weight: 900;
-                        font-size: 40px;
-                        color: $color-white;
-                        display: none;
-                    }
-                    &:checked::after{
-                       display: block; 
-                    }
-                    animation-name: check-beating;
-                    animation-delay: 1s;
-                    animation-duration: 2s;
-                    @keyframes check-beating {
-                        25% {
-                            scale: 1.2;
-                            background-color: $color-main;
-                        }
-                        50% { 
-                            scale: 1;
-                            background-color: #d5d5d5;
-                        } 
-                        75% {
-                            scale: 1.2;
-                            background-color: $color-main;
-                        }
-                        100% {
-                            scale: 1;
-                            background-color: #d5d5d5;
-                        }
-                    }
-                }
-            }
-            
-
-            &__form-comments{
-                display: flex;
-                flex-direction: column;
-                & textarea {
-                    margin: 10px 0 10px 0;
-                    padding: 8px;
-                    width: 80%;
-                    resize: none;
-                    @include mobile-landscape-resolution{
-                        width: 90%;
-                    }
-                    @include mobile-portrait-resolution{
-                        width: 100%;
-                    }
-                }
-            }
-            
-            &__reset-button {
-                min-width: fit-content;
-                color: $color-black;
-                width: 220px;
-                height: 40px;
-                border-radius: 8px;
-                border: 2px solid #747272;
-                font-size: 1rem;
-                margin: 50px 0;
-
-                &:hover {
-                    background-color: #cec9c9;
-                    cursor: pointer; 
-                }
-
-                &:active{
-                    transform: translate(0px, 4px);
-                }
-
-                @include tablet-resolution {
-                    height: 40px;
-                    width: 200px;
-                    padding: 3px 12px; 
-                }
-                @include mobile-portrait-resolution{
-                    width: 100%;
-                    padding: 6px 12px; 
-                }
-            }
-
-            &__send-button {
-                background-color: #3a3a3a;
-                color: #ffffff;
-                width: 120px;
-                height: 40px;
-                border-radius: 8px;
-                border: none;
-                font-size: 1rem;
-                margin: 45px 0 0 0;
-
-                &:hover {
-                    background-color: $color-black;
-                    color: $color-white;
-                    cursor: pointer;
-                }
-
-                &:active {
-                    transform: translate(0px, 4px);
-                }
-
-                @include tablet-resolution {
-                    height: 40px;
-                    width: 120px;
-                    padding: 3px 8px; 
-                }
-                @include mobile-portrait-resolution{
-                    width: 100%;
-                    padding: 6px 12px; 
-                }
-            }
-        }
     }
 }
 
-.faq-banner {
+.contact-title {
+    padding: 50px;
+    font-size: 2.5rem;
+    @include tablet-resolution {
+        width: 100%;
+        text-align: center;           
+    }
+    @include mobile-landscape-resolution {
+        font-size: 1.8rem;
+    }
+    @include mobile-portrait-resolution {
+        background-color: $color-black;
+        color: $color-white;
+    }
+}
+
+.contact-form {
+    width: 90%;
+    margin-right: 5%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 40px 40px 40px;
+    font-weight: 700;
+    line-height: 1.5rem;
+    @include mobile-landscape-resolution{
+        padding: 20px;
+        margin: 0;
+        width: 100%;
+    }
+    &__name{
+        display: flex;
+        flex-direction: column;
+        & input {
+            @include form-input;
+            @include mobile-portrait-resolution{
+                width:100%;
+            }
+        }
+    }
+    &__mail{
+        display: flex;
+        flex-direction: column;
+        & input {
+            @include form-input;
+            @include mobile-portrait-resolution{
+                width:100%;
+            }
+        }
+    }
+    &__consult{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 25px 0;
+        & select {
+            width: fit-content;
+            padding: 5px;
+            cursor: pointer;
+        }
+    }
+    &__checkbox {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 25px 0;      
+        @include mobile-landscape-resolution {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        & label{
+            margin: 0 25px;
+            @include mobile-landscape-resolution{
+            order: 1;
+            margin: 0;
+            }  
+        }
+        & input{
+            appearance: none;
+            height: 50px;
+            min-width: 50px;
+            background-color: #d5d5d5;
+            border-radius: 5px;
+            cursor: pointer;
+            @extend .flex-center;
+            animation-name: check-beating;
+            animation-delay: 1s;
+            animation-duration: 2s;
+            @keyframes check-beating {
+                25% {
+                    scale: 1.2;
+                    background-color: $color-main;
+                }
+                50% { 
+                    scale: 1;
+                    background-color: #d5d5d5;
+                } 
+                75% {
+                    scale: 1.2;
+                    background-color: $color-main;
+                }
+                100% {
+                    scale: 1;
+                    background-color: #d5d5d5;
+                }
+            }
+            @include mobile-landscape-resolution{
+                order: 2;
+                margin: 25px 0 0 0;
+            }  
+            &:hover{
+                background-color: #aca9a9;
+                scale: 1.1;
+            }
+            &:checked{
+                background-color: $color-main;
+            }
+            &::after{
+                font-family: "Font Awesome 5 Free";
+                content: "\f00c";
+                font-weight: 900;
+                font-size: 40px;
+                color: $color-white;
+                display: none;
+            }
+            &:checked::after{
+                display: block; 
+            }
+        }
+    }
+    &__comment{
+        display: flex;
+        flex-direction: column;
+        & textarea {
+            margin: 10px 0 10px 0;
+            padding: 8px;
+            width: 80%;
+            resize: none;
+            @include mobile-landscape-resolution{
+                width: 90%;
+            }
+            @include mobile-portrait-resolution{
+                width: 100%;
+            }
+        }
+    }        
+    &__reset-button {
+        min-width: fit-content;
+        color: $color-black;
+        width: 220px;
+        height: 40px;
+        border-radius: 8px;
+        border: 2px solid #747272;
+        font-size: 1rem;
+        margin: 50px 0;
+        &:hover {
+            background-color: #cec9c9;
+            cursor: pointer; 
+        }
+        &:active{
+            transform: translate(0px, 4px);
+        }
+        @include tablet-resolution {
+            height: 40px;
+            width: 200px;
+            padding: 3px 12px; 
+        }
+        @include mobile-portrait-resolution{
+            width: 100%;
+            padding: 6px 12px; 
+        }
+    }
+    &__send-button {
+        background-color: #3a3a3a;
+        color: #ffffff;
+        width: 120px;
+        height: 40px;
+        border-radius: 8px;
+        border: none;
+        font-size: 1rem;
+        margin: 45px 0 0 0;
+        &:hover {
+            background-color: $color-black;
+            color: $color-white;
+            cursor: pointer;
+        }
+        &:active {
+            transform: translate(0px, 4px);
+        }
+        @include tablet-resolution {
+            height: 40px;
+            width: 120px;
+            padding: 3px 8px; 
+        }
+        @include mobile-portrait-resolution{
+            width: 100%;
+            padding: 6px 12px; 
+        }
+    }
+}
+.banner-faq {
     @extend .flex-center;
-    background-color: #000000c4;
+    background-color: $color-opacity;
 
     &__title{
         font-size: 5rem;
         color: $color-white;
     }
 }
-
-.faq-container {
+.container-faq {
+    list-style-type: none;
     width:80%;
     margin: 0 auto;
     padding: 50px 0;
