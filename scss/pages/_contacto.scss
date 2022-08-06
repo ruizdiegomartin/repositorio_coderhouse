@@ -1,194 +1,259 @@
+.contact{
+    @extend .flex-center;
+    padding: 100px 0;
+    @include mobile-portrait-resolution{
+        padding: 0;
+    }
 
-
-.main-container__contact{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    & .contact-section{
+    &__wrapper-contact{
         background-color: $color-white;
-        width: 60%;
+        width: 80%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;   
-        border-right: solid 3px $color-black;
-        border-left: solid 3px $color-black;
+        border: solid 3px $color-black;
+        border-radius: 25px;
 
-        @include tablet-view{
-            width: 70%;
+        @include tablet-resolution{
+            width: 80%;
             align-items: start;
             height: 100%;
         }
-        @include mobile-portrait-view{
+        @include mobile-portrait-resolution{
             width: 100%;
-            border-left: none;
-            border-right: none;
+            border: none;  
+            border-radius: 0px;
         }
+    }
+}
 
-        &__form-title {
-            padding: 50px;
-            font-size: 2.5rem;
+.contact-title {
+    padding: 50px;
+    font-size: 2.5rem;
+    @include tablet-resolution {
+        width: 100%;
+        text-align: center;           
+    }
+    @include mobile-landscape-resolution {
+        font-size: 1.8rem;
+    }
+    @include mobile-portrait-resolution {
+        background-color: $color-black;
+        color: $color-white;
+    }
+}
 
-            @include tablet-view {
-                margin: auto;
-            }
-            @include mobile-landscape-view {
-                font-size: 1.8rem;
-                padding: 60px 0px 40px 15px;
+.contact-form {
+    width: 90%;
+    margin-right: 5%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 40px 40px 40px;
+    font-weight: 700;
+    line-height: 1.5rem;
+    @include mobile-landscape-resolution{
+        padding: 20px;
+        margin: 0;
+        width: 100%;
+    }
+    &__name{
+        display: flex;
+        flex-direction: column;
+        & input {
+            @include form-input;
+            @include mobile-portrait-resolution{
+                width:100%;
             }
         }
-
-        &__form {
-            width: 90%;
-            margin-right: 5%;
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: .5fr .5fr .5fr .5fr 1fr .5fr .5fr;
-            grid-template-areas: 
-            "name"
-            "mail"
-            "consult-type"
-            "subscribe"
-            "comments"
-            "reset"
-            "send";
-            padding: 0 40px 40px 40px;
-            font-weight: 700;
-            line-height: 1.5rem;
-        
-            @include mobile-landscape-view{
-                padding: 20px;
+    }
+    &__mail{
+        display: flex;
+        flex-direction: column;
+        & input {
+            @include form-input;
+            @include mobile-portrait-resolution{
+                width:100%;
             }
-
-            & .form-name{
-                grid-area: name;
-                & .form-input{
-                    width: 60%;
-                    padding: 12px 5px;
-                    border: none;
-                    border-bottom: solid 2px $color-black;
-                    outline: none;
+        }
+    }
+    &__consult{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 25px 0;
+        & select {
+            width: fit-content;
+            padding: 5px;
+            cursor: pointer;
+        }
+    }
+    &__checkbox {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 25px 0;      
+        @include mobile-landscape-resolution {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        & label{
+            margin: 0 25px;
+            @include mobile-landscape-resolution{
+            order: 1;
+            margin: 0;
+            }  
+        }
+        & input{
+            appearance: none;
+            height: 50px;
+            min-width: 50px;
+            background-color: #d5d5d5;
+            border-radius: 5px;
+            cursor: pointer;
+            @extend .flex-center;
+            animation-name: check-beating;
+            animation-delay: 1s;
+            animation-duration: 2s;
+            @keyframes check-beating {
+                25% {
+                    scale: 1.2;
+                    background-color: $color-main;
                 }
-            }
-            
-            & .form-mail{
-                grid-area: mail;
-                & .form-input{
-                    width: 60%;
-                    padding: 12px 5px;
-                    border: none;
-                    border-bottom: solid 2px $color-black;
-                    outline: none;
+                50% { 
+                    scale: 1;
+                    background-color: #d5d5d5;
+                } 
+                75% {
+                    scale: 1.2;
+                    background-color: $color-main;
                 }
-            }
-
-            & .form-consult{
-                grid-area: consult-type;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-            }
-
-            & .form-consult select{
-                width: fit-content;
-                padding: 5px;
-            }
-
-            & .form-checkbox{
-                grid-area: subscribe;
-                width: 50%;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-
-                @media screen and (max-width: 1400px){
-                    width: 75%;
-                }
-                @include tablet-view {
-                    width: 50vw;
-                }
-                @include mobile-landscape-view {
-                    width: 90vw;
-                    flex-direction: column;
-                    align-items: flex-start;
-                }
-                @include mobile-portrait-view{
-                    margin-bottom: 20px;
+                100% {
+                    scale: 1;
+                    background-color: #d5d5d5;
                 }
             }
-
-            & .form-comments{
-                grid-area: comments;
+            @include mobile-landscape-resolution{
+                order: 2;
+                margin: 25px 0 0 0;
+            }  
+            &:hover{
+                background-color: #aca9a9;
+                scale: 1.1;
             }
-
-            & .form__text-area{
-                margin: 10px 0 10px 0;
-                padding: 8px;
-                width: 85%;
-                resize: none;
-
-                @include mobile-landscape-view{
-                    width: 60%;
-                }
-                @include mobile-portrait-view{
-                    width: 85%;
-                }
+            &:checked{
+                background-color: $color-main;
             }
-            
-            & .form__reset-button {
-                grid-area: reset;
-                min-width: fit-content;
-                background-color: #747272;
-                color: #ffffff;
-                width: 220px;
-                height: 40px;
-                border-radius: 8px;
-                border: none;
-                font-size: 1rem;
-
-                &:hover {
-                    background-color: #928f8f;
-                    cursor: pointer; 
-                }
-
-                &:active{
-                    transform: translate(0px, 4px);
-                }
-
-                @include tablet-view {
-                    height: 40px;
-                    width: 200px;
-                    padding: 3px 12px; 
-                }
+            &::after{
+                font-family: "Font Awesome 5 Free";
+                content: "\f00c";
+                font-weight: 900;
+                font-size: 40px;
+                color: $color-white;
+                display: none;
             }
-
-            & .form__send-button {
-                grid-area: send;
-                background-color: #3a3a3a;
-                color: #ffffff;
-                width: 120px;
-                height: 40px;
-                border-radius: 8px;
-                border: none;
-                font-size: 1rem;
-
-                &:hover {
-                    background-color: $color-black;
-                    color: $color-white;
-                    cursor: pointer;
-                }
-
-                &:active {
-                    transform: translate(0px, 4px);
-                }
-
-                @include tablet-view {
-                    height: 40px;
-                    width: 120px;
-                    padding: 3px 8px; 
-                }
+            &:checked::after{
+                display: block; 
             }
+        }
+    }
+    &__comment{
+        display: flex;
+        flex-direction: column;
+        & textarea {
+            margin: 10px 0 10px 0;
+            padding: 8px;
+            width: 80%;
+            resize: none;
+            @include mobile-landscape-resolution{
+                width: 90%;
+            }
+            @include mobile-portrait-resolution{
+                width: 100%;
+            }
+        }
+    }        
+    &__reset-button {
+        min-width: fit-content;
+        color: $color-black;
+        width: 220px;
+        height: 40px;
+        border-radius: 8px;
+        border: 2px solid #747272;
+        font-size: 1rem;
+        margin: 50px 0;
+        &:hover {
+            background-color: #cec9c9;
+            cursor: pointer; 
+        }
+        &:active{
+            transform: translate(0px, 4px);
+        }
+        @include tablet-resolution {
+            height: 40px;
+            width: 200px;
+            padding: 3px 12px; 
+        }
+        @include mobile-portrait-resolution{
+            width: 100%;
+            padding: 6px 12px; 
+        }
+    }
+    &__send-button {
+        background-color: #3a3a3a;
+        color: #ffffff;
+        width: 120px;
+        height: 40px;
+        border-radius: 8px;
+        border: none;
+        font-size: 1rem;
+        margin: 45px 0 0 0;
+        &:hover {
+            background-color: $color-black;
+            color: $color-white;
+            cursor: pointer;
+        }
+        &:active {
+            transform: translate(0px, 4px);
+        }
+        @include tablet-resolution {
+            height: 40px;
+            width: 120px;
+            padding: 3px 8px; 
+        }
+        @include mobile-portrait-resolution{
+            width: 100%;
+            padding: 6px 12px; 
+        }
+    }
+}
+.banner-faq {
+    @extend .flex-center;
+    background-color: $color-opacity;
+
+    &__title{
+        font-size: 5rem;
+        color: $color-white;
+    }
+}
+.container-faq {
+    list-style-type: none;
+    width:80%;
+    margin: 0 auto;
+    padding: 50px 0;
+    &__faq-q{
+        font-size: 1.2rem;
+        font-weight: 700;
+        line-height: 2rem;
+    }
+    &__faq-a{
+        line-height: 2rem;
+    }
+    &__faq-ul{
+        list-style-type: square;
+        & li{
+            text-justify: auto;
+            line-height: 2rem;
         }
     }
 }

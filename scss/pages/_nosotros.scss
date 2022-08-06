@@ -1,58 +1,143 @@
-.about-title{
+
+.container-title {
+    @extend .flex-center;
+    &__title {
+    padding: 50px 0;
+    margin: 0;
     text-align: center;
     font-size: 3.5rem;
     font-weight: 700;
+    @include mobile-portrait-resolution{
+        font-size: 3rem;
+    }
+    }
 }
-
-.about-img{
-    border-radius: 50%;
+.about-wrapper {
+    display: flex;
+    padding-bottom: 50px;
+    @include tablet-resolution {
+        flex-direction: column;
+        }
 }
-
-.about-description{
-    font-size: 1rem;
-    line-height: 2rem;
-    width: 80%;
+.portrait-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 15px;
+    width: 40%;
+    @include tablet-resolution {
+        width:100%;
+        justify-content: center;
+        margin: 25px 0;
+        }
+    & img {
+        height:300px;
+        border-radius: 50%;
+    }
 }
-
-.location-img{
-    width: 100%;
+.resume-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 15px;
+    width: 60%;
+    @include tablet-resolution {
+        width:100%;
+        justify-content: center;
+        margin: 25px 0 50px 0;
+    }
+    &__description {
+        font-size: 1rem;
+        line-height: 2rem;
+        width: 80%;
+        text-align: justify;
+        margin: 0;
+    }
 }
-
-.payments-img{
-    width: 100%;
+.sections-wrapper {
+    display: flex;
+    background-color: $color-main;
+    @include tablet-resolution {
+        flex-direction: column;
+    }
+    & section {
+        background-color: $color-opacity;
+        color: $color-white;
+        width: calc(100% / 3);
+        padding: 2%;
+        @include tablet-resolution {
+            width:100%;
+        }
+        display: flex;
+        flex-direction: column;
+        & h2, h3 {
+            text-align: center;
+        }  
+    }
 }
-
-.logo-mastercard{
-    width: 100px;
+.find-us{
+    &__title{
+        font-weight: 700;
+        @include tablet-resolution{
+            margin-top: 25px;  
+        }
+    }
+    & p {
+        line-height: 2rem;
+        padding: 25px;
+        text-align: justify;
+        margin: 0;
+    }
+}    
+.payments {
+    align-items: center;
+    &__title{
+        font-weight: 700;
+    }
+    &__img {
+        width: 100%;
+        border-radius: 10px;
+        margin: 1.5rem 0;
+    }
+    &__subtitle {
+        text-align: center;
+        font-size: 1.4rem;
+        font-weight: 400;
+    }
+    &__logos-container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 10px;
+        justify-content: space-around;
+        @include tablet-resolution{
+            flex-direction: column;
+            align-items: center;
+        }
+        & img{
+            width: 100px;
+        }
+    }
 }
-
-.logo-visa{
-    width: 100px;
-}
-
-.logo-mercadopago{
-    width: 100px;
-}
-
-.columna-1, .columna-2, .columna-3{
-    background-color: #000000a1;
-}
-
-.findus-titles{
-    text-align: center;
-    font-size: 2rem;
-    color: #ffffff;
-    font-weight: 700;
-}
-
-.payments-subtitles{
-    padding: 25px 0px;
-    color: #ffffff;
-    font-weight: 700;
-}
-
-.findus-text {
-    color: #ffffff;
-    padding: 15px;
-    line-height: 2rem;
+.location{
+    align-items: center;
+    &__title{
+        font-weight: 700;
+    }
+    &__text {
+        text-align: center;
+        line-height: 2rem;
+    }
+    & iframe {
+        width: 100%;
+        border-radius: 10px;
+        margin: 25px 0;
+        @include tablet-resolution {
+            width: 90%;
+            margin-bottom: 50px;
+        }
+        @include mobile-portrait-resolution {
+            width: 100%;
+        }
+    }
 }
