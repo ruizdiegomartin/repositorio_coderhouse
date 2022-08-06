@@ -13,26 +13,28 @@
     border-radius: 8px;
     box-shadow: 3px 3px #30081c;
     transition: all .2s;
-    animation-name: beating;
-    animation-delay: 2s;
-    animation-duration: 2s;
-    animation-iteration-count: 1;
-    @keyframes beating {
-        25% {
-            scale: 1.2;
-            background-color: #971154;
-         }
-        50% { 
-            scale: 1;
-            background-color: #d81b7a;
-        } 
-        75% {
-            scale: 1.2;
-            background-color: #971154;
-        }
-        100% {
-            scale: 1;
-            background-color: #d81b7a;
+    @media only screen and (min-width: 922px){
+        animation-name: beating;
+        animation-delay: 2s;
+        animation-duration: 2s;
+        animation-iteration-count: 1;
+        @keyframes beating {
+            25% {
+                scale: 1.2;
+                background-color: #971154;
+            }
+            50% { 
+                scale: 1;
+                background-color: #d81b7a;
+            } 
+            75% {
+                scale: 1.2;
+                background-color: #971154;
+            }
+            100% {
+                scale: 1;
+                background-color: #d81b7a;
+            }
         }
     }
     &:hover {

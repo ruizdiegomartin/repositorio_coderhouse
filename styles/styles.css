@@ -910,10 +910,6 @@ html, main {
   line-height: 2rem;
 }
 
-.error-main {
-  overflow-x: hidden;
-}
-
 .container-header {
   min-height: 50vh;
   align-items: flex-end;
@@ -1011,27 +1007,31 @@ html, main {
   border-radius: 8px;
   box-shadow: 3px 3px #30081c;
   transition: all 0.2s;
-  animation-name: beating;
-  animation-delay: 2s;
-  animation-duration: 2s;
-  animation-iteration-count: 1;
 }
-@keyframes beating {
-  25% {
-    scale: 1.2;
-    background-color: #971154;
+@media only screen and (min-width: 922px) {
+  .cta-btn {
+    animation-name: beating;
+    animation-delay: 2s;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
   }
-  50% {
-    scale: 1;
-    background-color: #d81b7a;
-  }
-  75% {
-    scale: 1.2;
-    background-color: #971154;
-  }
-  100% {
-    scale: 1;
-    background-color: #d81b7a;
+  @keyframes beating {
+    25% {
+      scale: 1.2;
+      background-color: #971154;
+    }
+    50% {
+      scale: 1;
+      background-color: #d81b7a;
+    }
+    75% {
+      scale: 1.2;
+      background-color: #971154;
+    }
+    100% {
+      scale: 1;
+      background-color: #d81b7a;
+    }
   }
 }
 .cta-btn:hover {
